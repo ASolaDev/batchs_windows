@@ -151,7 +151,10 @@ while ($true) {
         '7' { Clear-DNSCache }
         '8' { Empty-RecycleBin }
         '9' { Run-All }
-        '0' { break }
+        '0' {
+            Write-Host "Saliendo..." -ForegroundColor Green
+            return
+        }
         default { Write-Host "Opcion no valida." -ForegroundColor Red }
     }
 
